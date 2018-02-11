@@ -1,0 +1,15 @@
+1) docker build -f Dockerfile -t basic-springboot-project .
+The above command will create a docker image.The docker image name should always 
+be in lower case. This command should be run in the folder where the "Dockerfile" exists.
+
+2)docker run --name basicspringboot-docker-app -p 8085:8085 basic-springboot-project:latest
+
+here --name is used to give the container created a name
+--p is for port forwarding from the container to the host machine where the container runs
+
+the port should be the port that the application is configured to run
+
+then give the name of the image:<version of the image> from which you want to create the 
+container.
+
+3) now run the url in the browser "http://localhost:8085/rest/docker/hello"
