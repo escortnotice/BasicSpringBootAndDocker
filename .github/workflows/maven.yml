@@ -1,13 +1,11 @@
 name: Java CI
 
-on: [push,pull_request]
+on: [push,pull_request,commit_comment]
 
 jobs:
-  build:
-
+  sonarpushjob:
+    name: push to sonarqube for static code analysis
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v1
-    - name: Build with Maven
+    - name: Push to SonarQube
       run: mvn sonar:sonar -Dsonar.host.url=http://35.184.2.1:9000/ -Dsonar.login=admin -Dsonar.password=admin
