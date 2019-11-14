@@ -1,0 +1,13 @@
+name: Java CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build with Maven
+      run: mvn sonar:sonar -Dsonar.host.url=http://35.184.2.1:9000/ -Dsonar.login=admin -Dsonar.password=admin
