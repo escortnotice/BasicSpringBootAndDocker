@@ -30,6 +30,10 @@ Response Body:
     "age": 18 
 }
 
+# Docker Image :
+
+https://hub.docker.com/repository/docker/escortnotice/basicspringbootanddocker
+
 # UI Project:
 
 This API project also has a UI. You can use that if needed for playing around. The UI project is in this github account
