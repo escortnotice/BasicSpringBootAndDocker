@@ -30,6 +30,11 @@ Response Body:
     "age": 18 
 }
 
+# UI Project:
+
+This API project also has a UI. You can use that if needed for playing around. The UI project is in this github account
+named "BasicAngularAndDocker". Please refer to that project for details and how to integrate and use it.
+
 -----------------------------------------------------------------------
 
 Installing Java-8 in Ubuntu: 
