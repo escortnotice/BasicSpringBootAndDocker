@@ -54,3 +54,13 @@ sudo update-alternatives --config java
 sudo update-alternatives --config javac
 
 ----------------------------------------------------------------------
+
+# Docker Build Command to build an image and push to Docker Hub
+
+Build the app with production environment file -> mvn clean build 
+
+Build the docker image with the new build --> docker build -t escortnotice/basicspringbootanddocker:v10.0 .
+
+Push to docker hub --> docker push escortnotice/basicspringbootanddocker:v10.0
+
+
