@@ -22,10 +22,10 @@ steps:
     - 'CLOUDSDK_CONTAINER_CLUSTER=k8s-cluster'
 
 # apply the new app image to the deployment
-- name: 'gcr.io/cloud-builders/kubectl'
-  args:
-   - set 
-   - image
-   - deployment 
-   - basicspringbootanddocker-backendapp-deployment 
-   - backend-app-container=gcr.io/$PROJECT_ID/basicspringbootanddocker:$COMMIT_SHA
+#- name: 'gcr.io/cloud-builders/kubectl'
+   #args:
+   #- set 
+   #- image
+   #- deployment 
+   #- basicspringbootanddocker-backendapp-deployment 
+   #- backend-app-container=gcr.io/$PROJECT_ID/basicspringbootanddocker:$COMMIT_SHA
