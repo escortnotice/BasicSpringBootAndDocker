@@ -8,9 +8,11 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/basicspringbootanddocker', '.']
     
-# push to the google image registry    
-images:
-  - 'gcr.io/$PROJECT_ID/basicspringbootanddocker'
+# Push the image to Google Cloud Registry
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - gcr.io/$PROJECT_ID/basicspringbootanddocker
 
 # re-apply the all the kubernetes config file for deploying the changes.
   - name: 'gcr.io/cloud-builders/kubectl'
