@@ -1,9 +1,13 @@
 steps:
+
 # build the springboot jar  
   - name: maven:3.6.0-jdk-11-slim
     entrypoint: 'mvn'
     args: ['clean', 'install', '-DskipTests']
-# build the docker image from the Dockerfile in the project
+
+ # build the docker image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/BasicSpringBootAndDocker', '.']
-  images: ['gcr.io/$PROJECT_ID/BasicSpringBootAndDocker']
+  
+images:
+  - 'gcr.io/$PROJECT_ID/BasicSpringBootAndDocker'
