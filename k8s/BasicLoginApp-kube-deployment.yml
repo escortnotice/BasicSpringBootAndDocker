@@ -50,7 +50,7 @@ spec:
     spec:
       containers:
       - name: backend-app-container
-        image: escortnotice/basicspringbootanddocker
+        image: gcr.io/celtic-bivouac-248908/basicspringbootanddocker
         resources:
           limits:
             memory: "350Mi"
