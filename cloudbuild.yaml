@@ -11,4 +11,4 @@ steps:
     
 # push to the google image registry    
 images:
-  - 'gcr.io/$PROJECT_ID/BasicSpringBootAndDocker'
+  - 'gcr.io/$PROJECT_ID/basicspringbootanddocker'
