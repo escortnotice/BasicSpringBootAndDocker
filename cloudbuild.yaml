@@ -6,13 +6,13 @@ steps:
     
 # build the docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/basicspringbootanddocker', '.']
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/basicspringbootanddocker:$COMMIT_SHA', '.']
     
 # Push the image to Google Cloud Registry
   - name: gcr.io/cloud-builders/docker
     args:
       - push
-      - gcr.io/$PROJECT_ID/basicspringbootanddocker
+      - gcr.io/$PROJECT_ID/basicspringbootanddocker:$COMMIT_SHA
 
 # re-apply the all the kubernetes config file for deploying the changes.
   - name: 'gcr.io/cloud-builders/kubectl'
@@ -20,3 +20,13 @@ steps:
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
     - 'CLOUDSDK_CONTAINER_CLUSTER=k8s-cluster'
+
+# apply the new app image to the deployment
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: [
+   'set', 
+   'image', 
+   'deployment', 
+   'basicspringbootanddocker-backendapp-deployment', 
+   'backend-app-container=gcr.io/$PROJECT_ID/basicspringbootanddocker:$TAG_NAME'
+  ]
