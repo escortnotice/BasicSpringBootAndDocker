@@ -13,7 +13,7 @@ images:
   - 'gcr.io/$PROJECT_ID/basicspringbootanddocker'
 
 steps: 
-# re-apply the all the kubernetes config file for deploying the changes
+# re-apply the all the kubernetes config file for deploying the changes.
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['apply', '-f', 'k8s/']
     env:
