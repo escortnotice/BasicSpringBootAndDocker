@@ -1,5 +1,4 @@
 steps:
-
 # build the springboot jar  
   - name: maven:3.6.0-jdk-11-slim
     entrypoint: 'mvn'
@@ -9,13 +8,14 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/basicspringbootanddocker', '.']
     
+# push to the google image registry    
+images:
+  - 'gcr.io/$PROJECT_ID/basicspringbootanddocker'
+
+steps: 
 # re-apply the all the kubernetes config file for deploying the changes
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['apply', '-f', 'k8s/']
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
     - 'CLOUDSDK_CONTAINER_CLUSTER=k8s-cluster'
-    
-# push to the google image registry    
-images:
-  - 'gcr.io/$PROJECT_ID/basicspringbootanddocker'
