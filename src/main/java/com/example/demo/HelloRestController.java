@@ -19,7 +19,7 @@ public class HelloRestController {
 	@GetMapping
 	public String hello() {
 		log.info("Rest Service Called: serverdatetime {}",Calendar.getInstance().getTime());
-		return "Vadakkam!! From Docker";
+		return "Hola!! From Docker";
 	}
 	
 }
