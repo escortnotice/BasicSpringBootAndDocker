@@ -29,7 +29,7 @@ kind: Service
 metadata:
   name: basicangulardocker-uiapp-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 80
@@ -68,7 +68,7 @@ kind: Service
 metadata:
   name: basicspringbootanddocker-backendapp-service
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - port: 8085
     targetPort: 8085
