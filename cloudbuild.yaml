@@ -4,7 +4,11 @@ steps:
   - name: maven:3.6.0-jdk-11-slim
     entrypoint: 'mvn'
     args: ['clean', 'install', '-DskipTests']
-
- # build the docker image
+    
+# build the docker image
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/basicspringbootanddocker', '.']
+    
+# push to the google image registry    
+images:
+  - 'gcr.io/$PROJECT_ID/BasicSpringBootAndDocker'
