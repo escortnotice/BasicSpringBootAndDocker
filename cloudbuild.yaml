@@ -4,9 +4,13 @@ steps:
     entrypoint: 'mvn'
     args: ['clean', 'install', '-DskipTests']
     
-# build the docker image
+# build the docker image with tag or commit id
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/$PROJECT_ID/basicspringbootanddocker:$REVISION_ID', '.']
+    
+# build the docker image with latest tag
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/basicspringbootanddocker:latest', '.']
     
 # Push the image to Google Cloud Registry
   #- name: gcr.io/cloud-builders/docker
