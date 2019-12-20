@@ -33,3 +33,4 @@ steps:
 # Push the image to Google Cloud Registry
 images:
   - 'gcr.io/$PROJECT_ID/basicspringbootanddocker:$REVISION_ID'
+  - 'gcr.io/$PROJECT_ID/basicspringbootanddocker:latest'
