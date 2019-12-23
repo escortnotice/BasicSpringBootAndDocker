@@ -32,7 +32,7 @@ steps:
     - image
     - deployment 
     - basicspringbootanddocker-backendapp-deployment 
-    - backend-app-container=gcr.io/$PROJECT_ID/basicspringbootanddocker:$COMMIT_SHA
+    - backend-app-container=gcr.io/$PROJECT_ID/basicspringbootanddocker:$REVISION_ID
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
     - 'CLOUDSDK_CONTAINER_CLUSTER=k8s-cluster'
