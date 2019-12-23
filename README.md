@@ -64,3 +64,8 @@ Build the docker image with the new build --> docker build -t escortnotice/basic
 Push to docker hub --> docker push escortnotice/basicspringbootanddocker:v10.0
 
 
+# Integrated with Google Cloud(GCP) using Cloud Build
+
+cloudBuild.yaml file is used to automate build using Google Cloud Build.
+On GCP, create a cloud build trigger and integrate it with this repository. 
+
