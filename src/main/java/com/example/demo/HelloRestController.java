@@ -18,8 +18,8 @@ public class HelloRestController {
 	
 	@GetMapping
 	public String hello() {
-		log.info("/Hello Rest Service Called with welcome message " + WELCOME_MESSAGE + " at serverdatetime {}",Calendar.getInstance().getTime());
-		return  WELCOME_MESSAGE + " /Hello Rest Service";
+		log.info("/Hello Rest Service Called with welcome message ''" + WELCOME_MESSAGE + "'' at serverdatetime {}",Calendar.getInstance().getTime());
+		return  WELCOME_MESSAGE + " from /Hello Rest Service";
 	}
 	
 }
