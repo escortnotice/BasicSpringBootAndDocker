@@ -14,12 +14,12 @@ public class HelloRestController {
 
 	
 	private static final Logger log = LoggerFactory.getLogger(HelloRestController.class);
-
+	private static final String WELCOME_MESSAGE = "Bonjour !!";
 	
 	@GetMapping
 	public String hello() {
-		log.info("Rest Service Called: serverdatetime {}",Calendar.getInstance().getTime());
-		return "Hello Sirr..!! From Docker";
+		log.info("/Hello Rest Service Called with welcome message " + WELCOME_MESSAGE + " at serverdatetime {}",Calendar.getInstance().getTime());
+		return  WELCOME_MESSAGE + " /Hello Rest Service";
 	}
 	
 }
