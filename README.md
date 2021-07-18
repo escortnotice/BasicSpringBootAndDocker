@@ -40,8 +40,9 @@ This API project also has a UI. You can use that if needed for playing around. T
 named "BasicAngularAndDocker". Please refer to that project for details and how to integrate and use it.
 
 -----------------------------------------------------------------------
+# Setup Ubuntu VM::
 
-# Installing Java-8 in Ubuntu: 
+## Installing Java-8 in Ubuntu: 
 
 sudo add-apt-repository ppa:openjdk-r/ppa
 
@@ -53,17 +54,17 @@ sudo update-alternatives --config java
 
 sudo update-alternatives --config javac
 
-# Clone the repo
+## Clone the repo
 git clone https://github.com/escortnotice/BasicSpringBootAndDocker.git
 
-# build the application to generate a jar in "target" folder of the project
+## build the application to generate a jar in "target" folder of the project
 cd  BasicSpringBootAndDocker
 ./mvnw package
 
-# start the application
+## start the application
 java -jar target/docker-spring-boot.jar 
 
-# test the application
+## test the application
  run the url in the browser "http://<ip address>:8085/rest/docker/hello"
 
 ----------------------------------------------------------------------
