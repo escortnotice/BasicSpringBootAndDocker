@@ -60,9 +60,11 @@ git clone https://github.com/escortnotice/BasicSpringBootAndDocker.git
 cd  BasicSpringBootAndDocker
 ./mvnw package
 
-# run the application
+# start the application
 java -jar target/docker-spring-boot.jar 
 
+# test the application
+ run the url in the browser "http://<ip address>:8085/rest/docker/hello"
 
 ----------------------------------------------------------------------
 
