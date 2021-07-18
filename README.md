@@ -41,31 +41,30 @@ named "BasicAngularAndDocker". Please refer to that project for details and how 
 
 -----------------------------------------------------------------------
 # Setup Ubuntu VM::
+	## Installing Java-8 in Ubuntu: 
 
-## Installing Java-8 in Ubuntu: 
+	sudo add-apt-repository ppa:openjdk-r/ppa
 
-sudo add-apt-repository ppa:openjdk-r/ppa
+	sudo apt-get update
 
-sudo apt-get update
+	sudo apt-get install openjdk-8-jdk
 
-sudo apt-get install openjdk-8-jdk
+	sudo update-alternatives --config java
 
-sudo update-alternatives --config java
+	sudo update-alternatives --config javac
 
-sudo update-alternatives --config javac
+	## Clone the repo
+	git clone https://github.com/escortnotice/BasicSpringBootAndDocker.git
 
-## Clone the repo
-git clone https://github.com/escortnotice/BasicSpringBootAndDocker.git
+	## build the application to generate a jar in "target" folder of the project
+	cd  BasicSpringBootAndDocker
+	./mvnw package
 
-## build the application to generate a jar in "target" folder of the project
-cd  BasicSpringBootAndDocker
-./mvnw package
+	## start the application
+	java -jar target/docker-spring-boot.jar 
 
-## start the application
-java -jar target/docker-spring-boot.jar 
-
-## test the application
- run the url in the browser "http://<ip address>:8085/rest/docker/hello"
+	## test the application
+	 run the url in the browser "http://<ip address>:8085/rest/docker/hello"
 
 ----------------------------------------------------------------------
 
