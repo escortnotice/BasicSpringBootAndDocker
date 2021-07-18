@@ -63,7 +63,7 @@ named "BasicAngularAndDocker". Please refer to that project for details and how 
 	## start the application
 	java -jar target/docker-spring-boot.jar 
 
-	## test the application
+	## test the application (Verify Inbound access to the port 8085 (protocol: TCP) in the vm is added ) 
 	 run the url in the browser "http://<ip address>:8085/rest/docker/hello"
 
 ----------------------------------------------------------------------
