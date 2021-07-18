@@ -53,6 +53,17 @@ sudo update-alternatives --config java
 
 sudo update-alternatives --config javac
 
+# Clone the repo
+git clone https://github.com/escortnotice/BasicSpringBootAndDocker.git
+
+# build the application to generate a jar in "target" folder of the project
+cd  BasicSpringBootAndDocker
+./mvnw package
+
+# run the application
+java -jar target/docker-spring-boot.jar 
+
+
 ----------------------------------------------------------------------
 
 # Docker Build Command to build an image and push to Docker Hub
