@@ -49,5 +49,5 @@ jobs:
       with:
         app-name: 'testwebapproy'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d0b60a41e3ab4dcab6cf4d8b07bc589b }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d0004942ad5f4628908b020f5961ce6d }}
         package: '*.jar'
